@@ -4,7 +4,9 @@
       "Bash(npm install *)",
       "Bash(git *)",
       "Bash(gh *)",
-      "Bash(winget install *)"
+      "Bash(winget install *)",
+      "Bash(cp -r frontend/* .)",
+      "Bash(cp frontend/css/style.css css/style.css)"
     ]
   }
 }
