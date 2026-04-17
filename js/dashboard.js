@@ -43,6 +43,7 @@ async function loadCountries(region = 'all') {
 
     allCountries = data.sort((a, b) => a.name.common.localeCompare(b.name.common));
     document.getElementById('countryCount').textContent = `${allCountries.length} países`;
+    if (region === 'all') updateGlobalStats(allCountries);
     renderCountriesGrid(allCountries);
 
   } catch (err) {
@@ -66,6 +67,17 @@ function renderCountriesGrid(countries) {
       </div>
     </div>
   `).join('');
+}
+
+function updateGlobalStats(countries) {
+  const totalPop = countries.reduce((sum, c) => sum + (c.population || 0), 0);
+  const languages = new Set(countries.flatMap(c => c.languages ? Object.values(c.languages) : []));
+  const currencies = new Set(countries.flatMap(c => c.currencies ? Object.keys(c.currencies) : []));
+
+  document.getElementById('statCountries').textContent = countries.length.toLocaleString('es');
+  document.getElementById('statPopulation').textContent = (totalPop / 1e9).toFixed(2) + 'B';
+  document.getElementById('statLanguages').textContent = languages.size.toLocaleString('es');
+  document.getElementById('statCurrencies').textContent = currencies.size.toLocaleString('es');
 }
 
 // Búsqueda de país individual
