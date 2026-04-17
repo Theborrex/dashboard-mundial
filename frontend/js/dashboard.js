@@ -1,4 +1,6 @@
-const API = 'http://localhost:3000/api';
+const API = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  ? 'http://localhost:3000/api'
+  : 'https://dashboard-mundial-api.onrender.com/api';
 
 // ─── Verificar sesión ────────────────────────────────────────────────────
 const token = sessionStorage.getItem('token');
