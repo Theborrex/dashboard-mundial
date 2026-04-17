@@ -155,6 +155,20 @@ input, button { font-family: inherit; }
 .chip:hover { border-color: var(--accent); color: var(--accent); }
 .chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
 
+.country-count {
+  margin-left: auto; font-size: .8rem; color: var(--text2);
+  background: var(--bg3); border: 1px solid var(--border);
+  padding: 4px 10px; border-radius: 20px;
+}
+
+.btn-refresh {
+  margin-left: 10px; padding: 3px 10px; background: transparent;
+  border: 1px solid var(--border); border-radius: 6px;
+  color: var(--text2); cursor: pointer; font-size: .78rem;
+  transition: all .2s;
+}
+.btn-refresh:hover { border-color: var(--accent); color: var(--accent); }
+
 /* ─── Countries Grid ─────────────────────────────────────────────────────── */
 .countries-grid {
   display: grid;

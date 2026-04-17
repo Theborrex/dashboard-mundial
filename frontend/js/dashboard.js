@@ -40,6 +40,7 @@ async function loadCountries(region = 'all') {
     const data = await res.json();
 
     allCountries = data.sort((a, b) => a.name.common.localeCompare(b.name.common));
+    document.getElementById('countryCount').textContent = `${allCountries.length} países`;
     renderCountriesGrid(allCountries);
 
   } catch (err) {
@@ -256,6 +257,8 @@ async function loadCrypto() {
     grid.innerHTML = `<div class="loading-state">Error al cargar precios: ${err.message}</div>`;
   }
 }
+
+document.getElementById('refreshCrypto').addEventListener('click', loadCrypto);
 
 // ─── Inicializar todo ────────────────────────────────────────────────────
 loadCountries();
