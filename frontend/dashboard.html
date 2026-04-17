@@ -83,6 +83,26 @@
     </div>
   </div>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span>🌍</span>
+        <span><strong>Dashboard Mundial</strong> — Proyecto Universitario</span>
+      </div>
+      <div class="footer-apis">
+        <span class="footer-label">APIs utilizadas:</span>
+        <a class="footer-link" href="https://restcountries.com" target="_blank" rel="noopener">REST Countries</a>
+        <span class="footer-sep">·</span>
+        <a class="footer-link" href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a>
+        <span class="footer-sep">·</span>
+        <a class="footer-link" href="https://www.coingecko.com/api" target="_blank" rel="noopener">CoinGecko</a>
+      </div>
+      <div class="footer-year">© <span id="footerYear"></span></div>
+    </div>
+  </footer>
+
   <script src="js/dashboard.js"></script>
+  <script>document.getElementById('footerYear').textContent = new Date().getFullYear();</script>
 </body>
 </html>
