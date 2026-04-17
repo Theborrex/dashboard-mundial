@@ -260,6 +260,24 @@ input, button { font-family: inherit; }
   color: var(--text2); padding: 32px; font-size: .9rem;
 }
 
+/* ─── Footer ─────────────────────────────────────────────────────────────── */
+.footer {
+  margin-top: 60px; border-top: 1px solid var(--border);
+  background: var(--bg2); padding: 20px 32px;
+}
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+}
+.footer-brand { display: flex; align-items: center; gap: 8px; font-size: .88rem; color: var(--text2); }
+.footer-apis { display: flex; align-items: center; gap: 8px; font-size: .82rem; }
+.footer-label { color: var(--text2); }
+.footer-link { color: var(--accent); text-decoration: none; }
+.footer-link:hover { text-decoration: underline; }
+.footer-sep { color: var(--border); }
+.footer-year { font-size: .8rem; color: var(--text2); }
+
 /* ─── Responsive ─────────────────────────────────────────────────────────── */
 @media (max-width: 600px) {
   .auth-card { padding: 24px 18px; }
