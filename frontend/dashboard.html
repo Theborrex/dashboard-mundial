@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Mundial</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="dashboard-page">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span>🌍</span> Dashboard Mundial
+    </div>
+    <div class="nav-user">
+      <span id="navUserName">Usuario</span>
+      <button class="btn-logout" id="logoutBtn">Cerrar sesión</button>
+    </div>
+  </nav>
+
+  <main class="main-content">
+
+    <!-- Sección 1: Buscador de Países (API REST Countries) -->
+    <section class="section">
+      <div class="section-header">
+        <h2>🗺️ Explorador de Países</h2>
+        <p>Busca cualquier país y obtén información detallada — <span class="api-badge">REST Countries API</span></p>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" id="countrySearch" placeholder="Buscar país (ej: Mexico, France, Japan...)" />
+        <button class="btn-search" id="searchBtn">Buscar</button>
+      </div>
+
+      <div id="countryResult" class="country-result hidden"></div>
+
+      <!-- Lista de regiones -->
+      <div class="region-filters">
+        <span class="filter-label">Explorar por región:</span>
+        <button class="chip active" data-region="all">Todos</button>
+        <button class="chip" data-region="Americas">América</button>
+        <button class="chip" data-region="Europe">Europa</button>
+        <button class="chip" data-region="Asia">Asia</button>
+        <button class="chip" data-region="Africa">África</button>
+        <button class="chip" data-region="Oceania">Oceanía</button>
+      </div>
+
+      <div id="countriesGrid" class="countries-grid">
+        <div class="loading-state">Cargando países...</div>
+      </div>
+    </section>
+
+    <!-- Sección 2: Clima del capital (API Open-Meteo) -->
+    <section class="section">
+      <div class="section-header">
+        <h2>🌤️ Clima en Capitales</h2>
+        <p>Temperatura actual de capitales del mundo — <span class="api-badge">Open-Meteo API</span></p>
+      </div>
+      <div id="weatherCards" class="weather-grid">
+        <div class="loading-state">Cargando datos del clima...</div>
+      </div>
+    </section>
+
+    <!-- Sección 3: Mercado Crypto (API CoinGecko) -->
+    <section class="section">
+      <div class="section-header">
+        <h2>📈 Mercado Cripto</h2>
+        <p>Precios en tiempo real de las principales criptomonedas — <span class="api-badge">CoinGecko API</span></p>
+      </div>
+      <div id="cryptoCards" class="crypto-grid">
+        <div class="loading-state">Cargando precios...</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal de detalles del país -->
+  <div class="modal-overlay hidden" id="countryModal">
+    <div class="modal">
+      <button class="modal-close" id="closeModal">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

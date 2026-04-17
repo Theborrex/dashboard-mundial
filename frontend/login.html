@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Mundial — Iniciar Sesión</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="auth-page">
+
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <span class="globe-icon">🌍</span>
+        <h1>Dashboard Mundial</h1>
+        <p>Explora el mundo con datos en tiempo real</p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab active" data-tab="login">Iniciar Sesión</button>
+        <button class="tab" data-tab="register">Registrarse</button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="loginForm" class="auth-form active">
+        <div class="form-group">
+          <label for="loginEmail">Correo electrónico</label>
+          <input type="email" id="loginEmail" placeholder="correo@ejemplo.com" autocomplete="email" />
+          <span class="field-error" id="loginEmailError"></span>
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Contraseña</label>
+          <input type="password" id="loginPassword" placeholder="••••••••" autocomplete="current-password" />
+          <span class="field-error" id="loginPasswordError"></span>
+        </div>
+        <button type="submit" class="btn-primary" id="loginBtn">Entrar</button>
+        <div class="demo-hint">
+          <small>Demo: <strong>admin@demo.com</strong> / <strong>admin123</strong></small>
+        </div>
+      </form>
+
+      <!-- Register Form -->
+      <form id="registerForm" class="auth-form">
+        <div class="form-group">
+          <label for="regName">Nombre completo</label>
+          <input type="text" id="regName" placeholder="Tu nombre" autocomplete="name" />
+          <span class="field-error" id="regNameError"></span>
+        </div>
+        <div class="form-group">
+          <label for="regEmail">Correo electrónico</label>
+          <input type="email" id="regEmail" placeholder="correo@ejemplo.com" autocomplete="email" />
+          <span class="field-error" id="regEmailError"></span>
+        </div>
+        <div class="form-group">
+          <label for="regPassword">Contraseña</label>
+          <input type="password" id="regPassword" placeholder="Mínimo 6 caracteres" autocomplete="new-password" />
+          <span class="field-error" id="regPasswordError"></span>
+        </div>
+        <button type="submit" class="btn-primary" id="registerBtn">Crear cuenta</button>
+      </form>
+
+      <div class="alert" id="authAlert"></div>
+    </div>
+  </div>
+
+  <script src="js/login.js"></script>
+</body>
+</html>
