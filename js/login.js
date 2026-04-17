@@ -1,6 +1,6 @@
 const API = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
   ? 'http://localhost:3000/api'
-  : 'https://dashboard-mundial-api.onrender.com/api';
+  : 'https://dashboard-mundial-nmcm.onrender.com/api';
 
 // ─── Tabs ────────────────────────────────────────────────────────────────
 document.querySelectorAll('.tab').forEach(tab => {
