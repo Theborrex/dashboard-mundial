@@ -44,6 +44,7 @@
         <button class="chip" data-region="Asia">Asia</button>
         <button class="chip" data-region="Africa">África</button>
         <button class="chip" data-region="Oceania">Oceanía</button>
+        <span class="country-count" id="countryCount"></span>
       </div>
 
       <div id="countriesGrid" class="countries-grid">
@@ -66,7 +67,9 @@
     <section class="section">
       <div class="section-header">
         <h2>📈 Mercado Cripto</h2>
-        <p>Precios en tiempo real de las principales criptomonedas — <span class="api-badge">CoinGecko API</span></p>
+        <p>Precios en tiempo real de las principales criptomonedas — <span class="api-badge">CoinGecko API</span>
+          <button class="btn-refresh" id="refreshCrypto" title="Actualizar precios">↻ Actualizar</button>
+        </p>
       </div>
       <div id="cryptoCards" class="crypto-grid">
         <div class="loading-state">Cargando precios...</div>
